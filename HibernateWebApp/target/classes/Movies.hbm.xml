@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.hwa.orm.Movies" table="movies" catalog="hibernate_demo">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="movieName" type="string">
+			<column name="movie_name" length="50" not-null="true" unique="false" />
+		</property>
+		<property name="year" type="string">
+			<column name="year" length="4" not-null="true" unique="false" />
+		</property>
+		<property name="director" type="string">
+			<column name="director" length="50" not-null="true" unique="false" />
+		</property>
+		<property name="country" type="string">
+			<column name="country" length="50" not-null="true" unique="false" />
+		</property>
+	</class>
+</hibernate-mapping>
